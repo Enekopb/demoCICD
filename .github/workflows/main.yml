@@ -11,3 +11,9 @@ jobs:
 
       - name: Probar codigo
         run: python3 main.py
+
+      - name: build
+        run: docker build -t Enekopb/holamundo .
+
+       - name: run
+         run: docker run Enekopb/holamundo
