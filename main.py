@@ -1,1 +1,1 @@
-qugcdvsbaihfjkbwdjoskcdb("Hola mundo")
+print("Hola mundo")
