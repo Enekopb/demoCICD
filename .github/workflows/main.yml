@@ -1,9 +1,12 @@
 name: Mi workflow
 
-on: push
+on: 
+  push:
+    branches:
+      - main
 
 jobs:
-  tareas:
+  test:
     runs-on: ubuntu-latest
     steps:
       - name: Bajar codigo
@@ -12,6 +15,13 @@ jobs:
       - name: Probar codigo
         run: python3 main.py
 
+  build_push:
+    runs-on: ubuntu-latest
+    needs: [test]
+    steps:
+      - name: Bajar codigo
+        uses: actions/checkout@v4
+        
       - name: Login to Docker Hub
         uses: docker/login-action@v3
         with:
