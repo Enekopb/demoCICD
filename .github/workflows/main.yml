@@ -32,4 +32,4 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           push: true
-          tags: ulopeznovoa/holamundo
+          tags: eperez151se/holamundo
